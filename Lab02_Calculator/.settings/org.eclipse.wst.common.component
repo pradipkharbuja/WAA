@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
     <wb-module deploy-name="CalculatorServlet2">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+<<<<<<< HEAD
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/java"/>
         <property name="context-root" value="CalculatorServlet2"/>
         <property name="java-output-path" value="/CalculatorServlet2/build/classes"/>
+=======
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/java"/>
+        <property name="java-output-path" value="/CalculatorServlet2/build/classes"/>
+        <property name="context-root" value="Lab02_Calculator"/>
+>>>>>>> e2279649dbe891a766f26d8653956b9f40938009
     </wb-module>
 </project-modules>

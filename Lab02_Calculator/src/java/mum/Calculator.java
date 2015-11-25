@@ -1,11 +1,17 @@
 package mum;
 
 import java.io.IOException;
+<<<<<<< HEAD
 import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+=======
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+>>>>>>> e2279649dbe891a766f26d8653956b9f40938009
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -24,10 +30,16 @@ public class Calculator extends HttpServlet {
 
 	}
 
+<<<<<<< HEAD
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		RequestDispatcher requestDispatcher = request
 				.getRequestDispatcher("calculator.jsp");
+=======
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("calculator.jsp");
+>>>>>>> e2279649dbe891a766f26d8653956b9f40938009
 		requestDispatcher.forward(request, response);
 	}
 
@@ -35,8 +47,13 @@ public class Calculator extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
+<<<<<<< HEAD
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
+=======
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+>>>>>>> e2279649dbe891a766f26d8653956b9f40938009
 		// TODO Auto-generated method stub
 		String add1 = request.getParameter("add1").trim();
 		String add2 = request.getParameter("add2").trim();
@@ -53,10 +70,17 @@ public class Calculator extends HttpServlet {
 			sum = "" + (a1 + a2);
 		} catch (NumberFormatException e) {
 			if (add1.isEmpty())
+<<<<<<< HEAD
 				add1 = "''";
 			if (add2.isEmpty())
 				add2 = "''";
 			sum = "''";
+=======
+				add1 = "";
+			if (add2.isEmpty())
+				add2 = "";
+			sum = "";
+>>>>>>> e2279649dbe891a766f26d8653956b9f40938009
 		}
 
 		/*
@@ -70,22 +94,37 @@ public class Calculator extends HttpServlet {
 			product = "" + (m1 * m2);
 		} catch (NumberFormatException e) {
 			if (mult1.isEmpty())
+<<<<<<< HEAD
 				mult1 = "''";
 			if (mult2.isEmpty())
 				mult2 = "''";
 			product = "''";
+=======
+				mult1 = "";
+			if (mult2.isEmpty())
+				mult2 = "";
+			product = "";
+>>>>>>> e2279649dbe891a766f26d8653956b9f40938009
 		}
 
 		request.setAttribute("add1", add1);
 		request.setAttribute("add2", add2);
 		request.setAttribute("mult1", mult1);
 		request.setAttribute("mult2", mult2);
+<<<<<<< HEAD
 		
 		request.setAttribute("sum", sum);
 		request.setAttribute("product", product);
 
 		RequestDispatcher requestDispatcher = request
 				.getRequestDispatcher("result.jsp");
+=======
+
+		request.setAttribute("sum", sum);
+		request.setAttribute("product", product);
+
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("result.jsp");
+>>>>>>> e2279649dbe891a766f26d8653956b9f40938009
 		requestDispatcher.forward(request, response);
 	}
 
