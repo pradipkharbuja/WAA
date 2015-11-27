@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+	<bean name="roastService" class="edu.mum.waa.starbucks.service.RoastServiceImpl" />
+
+	<bean name="loginService" class="edu.mum.waa.starbucks.service.LoginServiceImpl" />
+
+	<bean name="dataFacade" class="edu.mum.waa.starbucks.model.TestDataImpl" />
+
+</beans>
