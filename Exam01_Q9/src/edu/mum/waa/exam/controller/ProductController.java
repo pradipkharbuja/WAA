@@ -6,7 +6,6 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -24,21 +23,17 @@ public class ProductController {
 	@Autowired
 	private ProductService productService;
 
-	@RequestMapping("/categories/selectCategories/{test}")
-	private String listProducts(@RequestParam("categoryId") int categoryId) {
+	@RequestMapping("/listProductsByCategory")
+	private String listProducts(@RequestParam("categoryId") int categoryId, Model model) {
 
 		List<Product> list = productService.getByCategory(categoryId);
+		model.addAttribute("products", list);
 
 		return "listProducts";
 	}
 
 	@RequestMapping(value = "/product", method = RequestMethod.GET)
-	private String inputProduct(Model model) {
-
-		// retrieve from session
-		Category category = (Category) ((ModelMap) model.asMap()).get("category");
-		model.addAttribute(category);
-
+	private String inputProduct() {
 		return "productForm";
 	}
 
