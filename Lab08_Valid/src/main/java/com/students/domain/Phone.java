@@ -5,19 +5,8 @@ package com.students.domain;
 
 import java.io.Serializable;
 
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.Pattern;
-
-/**
- * @author B.Pirasanth
- *
- */
 public class Phone implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	private int area;

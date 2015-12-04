@@ -7,7 +7,7 @@ import com.students.domain.Phone;
 
 public class PhoneValidator implements Validator {
 
-	@Override
+	//@Override
 	public void validate(Object object, Errors errors) {
 		Phone phone = (Phone) object;
 		if(phone.getArea() < 100 || phone.getArea() > 999){
@@ -15,9 +15,10 @@ public class PhoneValidator implements Validator {
 		}
 	}
 
-	@Override
-	public boolean supports(Class<?> arg0) {
+	//@Override
+	public boolean supports(Class<?> obj) {
 		// TODO Auto-generated method stub
-		return false;
+		System.out.println("testing");
+		return Phone.class.isAssignableFrom(obj);
 	}
 }

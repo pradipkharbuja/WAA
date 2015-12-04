@@ -30,7 +30,7 @@ public class Student {
 	private Date birthday;
 
 	@Valid
-	private Phone phone;
+	private Phone phone = new Phone();
 
 	public int getId() {
 		return id;
