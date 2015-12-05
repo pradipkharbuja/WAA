@@ -36,7 +36,7 @@ public class Employee implements Serializable {
 	private Address address;
 
 	private MultipartFile image;
-
+		
 	public Address getAddress() {
 		return address;
 	}
@@ -91,6 +91,10 @@ public class Employee implements Serializable {
 
 	public void setImage(MultipartFile image) {
 		this.image = image;
+	}
+
+	public String getImageName() {
+		return getImage().getOriginalFilename();
 	}
 
 

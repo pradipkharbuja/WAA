@@ -34,7 +34,7 @@
 				</div>
 
 				<p>
-					<label for="lastName">Last Name: </label>
+					<label for="lastName"><spring:message code="lastName" text="Last Name"/> :</label>
 					<form:input path="lastName" />
 				</p>
 				<div style="text-align: center;">

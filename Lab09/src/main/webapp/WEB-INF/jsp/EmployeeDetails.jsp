@@ -1,19 +1,22 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE HTML>
 <html>
 <head>
 <title>Save Employee</title>
-<style type="text/css">@import url("<c:url value="/css/main.css"/>");</style>
+<style type="text/css">
+@import url("<c:url value="/css/main.css"/>");
+</style>
 </head>
 <body>
-<div id="global">
-    <h4>The employee details have been saved.</h4>
-    <p>
-        <h5>Details:</h5>
-        First Name: ${employee.firstName}<br/>
-        Last Name: ${employee.lastName}<br/>
-        Date of Birth: ${employee.birthDate}
-    </p>
-</div>
+	<div id="global">
+		<h4>The employee details have been saved.</h4>
+		<p>
+		<h5>Details:</h5>
+		First Name: ${employee.firstName}<br /> Last Name:
+		${employee.lastName}<br /> Date of Birth: ${employee.birthDate} <br />
+		Photo : <img alt="${employee.firstName}"
+			src="<c:url value="resources/images/${employee.imageName}"/>" width="250">
+		</p>
+	</div>
 </body>
 </html>
