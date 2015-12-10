@@ -14,30 +14,27 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 import mum.edu.domain.dto.DomainError;
 import mum.edu.domain.dto.DomainErrors;
- 
+
 @ControllerAdvice
 public class ExceptionController {
 
-
 	@Autowired
 	MessageSourceAccessor messageAccessor;
-	
-     @ExceptionHandler(MethodArgumentNotValidException.class)
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    @ResponseBody
-       public DomainErrors handleException(MethodArgumentNotValidException exception) {
-        List<FieldError> fieldErrors = exception.getBindingResult().getFieldErrors();
-   
-        DomainErrors errors = new DomainErrors();
-        errors.setErrorType("ValidationError");
-        for (FieldError fieldError : fieldErrors) {
-         	DomainError error = new DomainError( messageAccessor.getMessage(fieldError));
-                       errors.addError(error);
-        }
-         
-         return errors;
-    }
-     
-  
-  
+
+	@ExceptionHandler(MethodArgumentNotValidException.class)
+	@ResponseStatus(HttpStatus.BAD_REQUEST)
+	@ResponseBody
+	public DomainErrors handleException(MethodArgumentNotValidException exception) {
+		List<FieldError> fieldErrors = exception.getBindingResult().getFieldErrors();
+
+		DomainErrors errors = new DomainErrors();
+		errors.setErrorType("ValidationError");
+		for (FieldError fieldError : fieldErrors) {
+			DomainError error = new DomainError(messageAccessor.getMessage(fieldError));
+			errors.addError(error);
+		}
+
+		return errors;
+	}
+
 }

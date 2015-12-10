@@ -19,7 +19,7 @@ public class EmployeeController {
 	}
 
 	@RequestMapping(value = "/", method = RequestMethod.POST)
-	public @ResponseBody String indexPost() {
-		return "Hello";
+	public @ResponseBody Employee indexPost(@RequestBody @Valid Employee employee) {
+		return employee;
 	}
 }

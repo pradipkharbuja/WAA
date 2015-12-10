@@ -11,8 +11,8 @@ import com.packt.webstore.domain.Employee;
 public interface EmployeeRepository extends CrudRepository<Employee, Long> {
 
 	// Using Declared Query Example
-	@Query("SELECT e FROM Employee e WHERE id = :employeeId")
-	Employee locateOneEmployeeByHisNumber(@Param("employeeId") int id);
+	@Query("SELECT e FROM Employee e WHERE employeeNumber = :number")
+	Employee locateOneEmployeeByHisNumber(@Param("number") int id);
 
 	// Class Example
 	// Employee getEmployeeById(int id);

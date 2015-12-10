@@ -1,44 +1,41 @@
 package mum.edu.domain.dto;
 
- 	import java.util.ArrayList;
-	import java.util.List;
-	 
-	public class DomainErrors {
-	 
-	    private String errorType;
-	    private String message;
+import java.util.ArrayList;
+import java.util.List;
 
-	    public List<DomainError> getErrors() {
-			return errors;
-		}
+public class DomainErrors {
 
-		public void setErrors(List<DomainError> errors) {
-			this.errors = errors;
-		}
+	private String errorType;
+	private String message;
 
-		private List<DomainError> errors = new ArrayList<DomainError>();
-	 
- 	    public void addError(DomainError error) {
- 	        errors.add(error);
-	    }
- 	    
-		public String getErrorType() {
-			return errorType;
-		}
-		public void setErrorType(String errorType) {
-			this.errorType = errorType;
-		}
+	public List<DomainError> getErrors() {
+		return errors;
+	}
 
-		public String getMessage() {
-			return message;
-		}
+	public void setErrors(List<DomainError> errors) {
+		this.errors = errors;
+	}
 
-		public void setMessage(String message) {
-			this.message = message;
-		}
-	 
+	private List<DomainError> errors = new ArrayList<DomainError>();
 
-	 
- 	}
-	
- 
+	public void addError(DomainError error) {
+		errors.add(error);
+	}
+
+	public String getErrorType() {
+		return errorType;
+	}
+
+	public void setErrorType(String errorType) {
+		this.errorType = errorType;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+}
