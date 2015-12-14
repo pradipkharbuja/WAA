@@ -7,6 +7,5 @@
 	<!-- In this file, configure followings only Persistence Resources and Security, 
 		Hibernate, JPA Repositories, Authorization and Authentication, Services and 
 		Domain entities, -->
-
-
+	
 </beans>
